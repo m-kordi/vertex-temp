@@ -51,6 +51,20 @@ export class SliderComponent implements OnInit, OnDestroy {
     clearInterval(this.intervalId);  // أوقف التشغيل التلقائي مؤقتًا عند الضغط
     this.startAutoSlide();          // ثم أعد تشغيله
   }
+
+
+  prevSlide() {
+  this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  clearInterval(this.intervalId);
+  this.startAutoSlide();
+}
+
+nextSlide() {
+  this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  clearInterval(this.intervalId);
+  this.startAutoSlide();
+}
+
 }
 
 

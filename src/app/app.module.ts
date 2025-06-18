@@ -11,7 +11,7 @@ import { SliderComponent } from './components/home/slider/slider.component';
 import { MobilemenuComponent } from './layout/mobilemenu/mobilemenu.component';
 import { AsideComponent } from './components/categories/aside/aside.component';
 import { ItemsComponent } from './components/categories/items/items.component';
-
+import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { ItemsComponent } from './components/categories/items/items.component';
     SliderComponent,
     MobilemenuComponent,
     AsideComponent,
-    ItemsComponent
+    ItemsComponent,
+    PlaceholderComponent,
   ],
   imports: [
     BrowserModule,

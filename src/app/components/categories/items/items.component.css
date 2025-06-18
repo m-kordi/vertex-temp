@@ -227,3 +227,23 @@ section{
   margin: 15px inherit inherit inherit;
 }
 }
+@media (max-width:584px) {
+  .item-container{
+    justify-self: center;
+  }
+  .pagination-container{/* ? */
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: center;
+  }
+
+
+
+.sort-footer{
+  display: none;
+}
+.goto-section{
+  display: none;
+}
+}
+

@@ -82,3 +82,31 @@
 .dot.active {
   background-color: #d6b87d;
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background-color: transparent;
+  color: var(--main-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  /* transform: translateY(-50%);
+  transition: background-color 0.3s ease; */
+
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}

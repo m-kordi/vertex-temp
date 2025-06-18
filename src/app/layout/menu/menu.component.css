@@ -21,7 +21,7 @@ nav .container ul{
   gap: 20px;
 }
 nav .container ul li{/* ? */
-  /* padding: 10px; *//* ? */
+  padding: 10px;/* ? */
   cursor: pointer;/* ? */
 }
 .nav-button button{
@@ -30,16 +30,22 @@ nav .container ul li{/* ? */
   padding: 8px 11px 8px 11px;
   background-color: var(--secondary-color);
   border-radius: 4px 4px 4px 4px;
-  cursor: pointer;/* ? */
-}
-.nav-button button a{
   font-weight: 600;
   font-size: 12px;
   color: var(--main-color);
+  cursor: pointer;
+}
+.nav-button button:hover {
+  /* ! */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
+
 .nav-home a{
-  color: inherit;
+  color: black;
+}
+.nav-home a:hover{
+  color: var(--secondary-color);
 }
 
 @media (max-width:1268px) {

@@ -1,6 +1,55 @@
 <nav>
   <div class="container">
-    <div class="logo"><img src="assets/logov.png" alt="#"></div>
-    <div class="burger-menu"><i class="fas fa-bars"></i></div>
+    <div class="logo" (click)="goToHome()"><img src="assets/logov.png" alt="Logo"></div>
+    <button class="burger-icon" (click)="toggleMenu()" *ngIf="!menuOpen">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="overlay" [class.active]="menuOpen" (click)="toggleMenu()">
+
+    <div class="sidebar" [class.open]="menuOpen">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/categories">All Categories</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Bedrooms</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Living rooms</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Tabls</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Dining rooms</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Brands</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">Special offers</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">New</a></li>
+        <li class="nav-home"><a routerLink="/placeholder">...</a></li>
+      </ul>
+    </div>
+  </div>
   </div>
 </nav>
+<!-- <nav>
+  <div class="container">
+    <div class="logo"><img src="assets/logov.png" alt="#"></div>
+    <div class="burger-icon" (click)="toggleMenu()" *ngIf="!menuOpen">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" [class.open]="menuOpen">
+    <button class="close-btn" (click)="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+    <li (click)="toggleMenu()"><a routerLink="/"  >Home</a></li>
+    <li ><a routerLink="/categories">All Categories</a></li>
+    <li> Bedrooms</li>
+    <li>Living rooms</li>
+    <li>Tabls</li>
+    <li>Dining rooms</li>
+    <li>Brands</li>
+    <li>Special offers</li>
+    <li>New</li>
+    </ul>
+  </div>
+  </div>
+</nav>
+ -->
