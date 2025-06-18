@@ -1,0 +1,24 @@
+nav{
+    background-color: var(--header-color);
+    position: relative;
+    min-height: 50px;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  /* logo */
+  nav .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .burger-menu{
+    font-size: 24px;
+  }
+  @media (min-width:1268px) {
+nav{
+  display: none
+}
+}

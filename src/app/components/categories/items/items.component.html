@@ -1,0 +1,66 @@
+  <section>
+    <div class="item-header">
+      <div class="sort">
+        <p>Sort by:</p>
+        <select name="" id="">
+          <option value="">popularity</option>
+          <option value="">pop 1</option>
+          <option value="">pop 2</option>
+        </select>
+      </div>
+      <div class="sort-icons">
+        <div class="l-icon"><i class="fas fa-list"></i></div>
+        <div class="g-icon"><i class="fas fa-grip"></i></div>
+      </div>
+    </div>
+    <div class="item-container">
+      <div class="item-cards" *ngFor="let el of items">
+      <img loading="lazy" [src]="el.img" alt="img" />
+      <div class="item-intr">
+        <p class="item-detail">{{ el.expln }}</p>
+        <p class="evalu">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </p>
+        <p class="item-price">{{ el.price}}</p>
+        <button class="add-to-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Add To Cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="item-footer">
+      <div class="sort-footer">
+        <p>1-10 of 85 item</p>
+        <select name="" id="">
+          <option value="">10/page</option>
+          <option value="">9/page</option>
+          <option value="">8/page</option>
+        </select>
+      </div>
+      
+      <div class="pagination-container">
+        <div class="pagination-links">
+          <span>&lt;</span>
+          <a href="#">1</a>
+          <a href="#" class="active">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <span>...</span>
+          <a href="#">50</a>
+          <span>&gt;</span>
+      </div>
+      <div class="goto-section">
+        <span>Go to</span>
+        <input type="number" min="1" max="50" />
+      </div>
+    </div>
+
+  </div>
+  </section>
+

@@ -1,0 +1,23 @@
+<section class="container">
+<div class="slider-container">
+  <div class="slides-wrapper">
+    <div class="slide" *ngFor="let image of images; let i = index" [class.active]="i === currentIndex">
+      <img [src]="image.url" alt="Slide Image" />
+      <div class="overlay">
+        <h2>{{ image.title }}</h2>
+        <p>{{ image.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span
+      *ngFor="let img of images; let i = index"
+      class="dot"
+      [class.active]="i === currentIndex"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+</div>
+
+</section>

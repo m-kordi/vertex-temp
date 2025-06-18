@@ -1,0 +1,229 @@
+section{
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.item-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sort{
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  align-items: center;
+  width: 180px;
+
+}
+.sort p{
+  width: 53px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0%;
+
+}
+.sort select{
+  outline: none;
+  width: 117px;
+  height: 37px;
+  border-radius: 28px;
+  border: 1px solid #c1c1c1;
+  padding: 10px 14px 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sort-icons{
+  width: 90px;
+  height: 37;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sort-icons .l-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  background-color: #c1c1c1;
+}
+.sort-icons .l-icon i{
+  color: #767676;
+}
+.sort-icons .g-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  background-color: var(--secondary-color);
+}
+.sort-icons .g-icon i{
+  color: var(--main-color);
+}
+
+/* items */
+.item-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+    position: relative;
+}
+@media (max-width: 320px) {
+    .item-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+.item-cards{
+  width: 250px;
+  height:312px;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.item-cards img{
+  height:150px;
+  width: 230px;/* ? */
+  border-radius: 2px;
+}
+.item-cards .item-intr{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 230px;/* ? */
+}
+.item-intr .item-detail {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.item-intr .evalu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--secondary-color);
+}
+.item-intr .item-price{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--secondary-color);
+}
+
+.add-to-cart{
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 2px;
+  width: 100%;/* ? */
+  height: 36px;
+  cursor: pointer;
+
+}
+.add-to-cart i{
+  color: var(--main-color);
+}
+.add-to-cart span{
+  color: var(--main-color);
+}
+/* item footer */
+.item-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.sort-footer{
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  align-items: center;
+  width: 180px;
+}
+.sort-footer p{
+  width: 106px;
+  height: 22px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #8e8e8e;
+}
+.sort-footer select{
+  width: 68px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #8e8e8e;
+  border:none;
+
+}
+/* paginagtion */
+.pagination-container {
+  width: 413px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+.pagination-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pagination-links span,
+.pagination-links a {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+.pagination-links a.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.pagination-links a:hover {
+  background-color: var(--secondary-color);
+}
+.goto-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.goto-section input {
+  width: 40px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 13px;
+}
+/* media query */
+@media (max-width:1268px) {
+section{
+  margin: 15px inherit inherit inherit;
+}
+}

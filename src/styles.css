@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    -webkit-tap-highlight-color: transparent;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* old outline */
+    /* outline: none; */
+    /* new outline */
+    outline-color: transparent;
+    margin: 0;
+    padding: 0;
+
+    a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* @media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+} */
+
+@media (min-width: 1038px) {
+    .container {
+        width: 1020px;
+    }
+}
+
+@media (min-width: 1262px) {
+    .container {
+        width: 1240px;
+    }
+}
+
+@media (min-width: 1470px) {
+    .container {
+        width: 1440px;
+    }
+}
+
+}
+:root {
+    --header-color:#f4eeee;
+    --main-color:#ffffff;
+    --secondary-color:#b39368;
+    --button-color:#1E1E1E;
+
+}
+/* -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd; */
