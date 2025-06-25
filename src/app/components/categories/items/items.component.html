@@ -15,9 +15,9 @@
     </div>
     <div class="item-container">
       <div class="item-cards" *ngFor="let el of items">
-      <img loading="lazy" [src]="el.img" alt="img" />
+      <img loading="lazy" [src]="el.image" alt="img" />
       <div class="item-intr">
-        <p class="item-detail">{{ el.expln }}</p>
+        <p class="item-detail">{{ el.category }}</p>
         <p class="evalu">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -25,8 +25,8 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </p>
-        <p class="item-price">{{ el.price}}</p>
-        <button class="add-to-cart">
+        <p class="item-price">SAR {{ el.price}}</p>
+        <button class="add-to-cart" (click)="addToCart(el)">
           <i class="fas fa-shopping-cart"></i>
           <span>Add To Cart</span>
         </button>
@@ -42,7 +42,7 @@
           <option value="">8/page</option>
         </select>
       </div>
-      
+
       <div class="pagination-container">
         <div class="pagination-links">
           <span>&lt;</span>
@@ -63,4 +63,7 @@
 
   </div>
   </section>
+  <div *ngIf="showToast" class="toast">
+  ✅ تمت إضافة المنتج إلى السلة
+</div>
 
