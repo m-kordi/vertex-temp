@@ -1,34 +1,37 @@
-<!-- <h2>سلة المشتريات</h2>
-<div *ngIf="cartItems.length === 0">السلة فارغة</div>
-<div *ngFor="let item of cartItems">
-  <img [src]="item.image" alt="{{ item.title }}" width="80" style="margin-bottom: 8px;" />
-  <p>{{ item.title }} - الكمية: {{ item.quantity }} - السعر: {{ item.price * item.quantity }} SAR</p>
-  <button (click)="remove(item.id)">إزالة</button>
-</div>
-<button (click)="clear()" *ngIf="cartItems.length > 0">تفريغ السلة</button> -->
+<section>
+  <div class="container">
+  <div class="empty-cart" *ngIf="cartItems.length === 0">السلة فارغة empty cart</div>
 
 
-<div *ngIf="cartItems.length === 0">السلة فارغة</div>
-
-<div *ngFor="let item of cartItems" class="cart-item" style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
-  <img [src]="item.image" alt="{{ item.title }}" width="80" height="80" style="object-fit: contain;" />
-  <div>
+<div  *ngFor="let item of cartItems" class="cart-item">
+  <img [src]="item.image" class="product-image" />
+  <div class="product-details">
     <p><strong>{{ item.title }}</strong></p>
-    <p>السعر: {{ item.price }} SAR</p>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <button (click)="decrease(item.id)">-</button>
+    <p>السعر: {{ item.price }} </p>
+    <div class="pmc">
+      <button class="minus" (click)="decrease(item.id)"><i class="fas fa-minus"></i></button>
       <span>{{ item.quantity }}</span>
-      <button (click)="increase(item.id)">+</button>
+      <button class="pluse"   (click)="increase(item.id)"><i class="fas fa-plus"></i></button>
     </div>
-    <p>المجموع الفرعي: {{ item.price * item.quantity }} SAR</p>
-    <button (click)="remove(item.id)">إزالة</button>
+    <p>المجموع الفرعي: {{ item.price * item.quantity }} </p>
+    <button class="emp" (click)="remove(item.id)">إزالة</button>
   </div>
 </div>
 
-<div *ngIf="cartItems.length > 0">
+<div *ngIf="cartItems.length > 0" class="cart-total">
   <hr />
-  <p><strong>الإجمالي: {{ totalPrice }} SAR</strong></p>
-  <button (click)="clear()">تفريغ السلة</button>
-</div>
-<button (click)="checkout()" *ngIf="cartItems.length > 0">إرسال الطلب</button>
+  <p>الإجمالي: {{ totalPrice }}</p>
+  <div class="cart-subm">
+    <button class="cart-clear" (click)="clear()">تفريغ السلة</button>
+    <button class="cart-end" (click)="checkout()" *ngIf="cartItems.length > 0">إرسال الطلب</button>
+  </div>
 
+</div>
+
+<div *ngIf="showToast" class="toast">
+  تم ارسال السلة بنجاح
+</div>
+
+
+</div>
+</section>

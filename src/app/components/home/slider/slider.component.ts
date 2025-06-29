@@ -43,7 +43,7 @@ export class SliderComponent implements OnInit, OnDestroy {
   startAutoSlide() {
     this.intervalId = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 3000); // كل 3 ثوانٍ
+    }, 3000); //كل تلت ثواني
   }
 
   goToSlide(index: number) {

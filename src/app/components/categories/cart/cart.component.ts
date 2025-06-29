@@ -1,14 +1,3 @@
-/* import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
-})
-export class CartComponent {
-
-}
- */
 import { Component, OnInit } from '@angular/core';
 import { CartService, CartItem } from './service/carts.service';
 
@@ -19,6 +8,7 @@ import { CartService, CartItem } from './service/carts.service';
 })
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
+  showToast: boolean = false;
 
   constructor(private cartService: CartService) {}
 
@@ -51,10 +41,12 @@ export class CartComponent implements OnInit {
   checkout() {
   this.cartService.checkoutCart().subscribe({
     next: res => {
-      console.log('✅ البيانات أُرسلت بنجاح', res);
+      console.log(' البيانات أُرسلت بنجاح', res);
+      this.showToast = true;
+      setTimeout(() => this.showToast = false, 3000);
     },
     error: err => {
-      console.error('❌ فشل في الإرسال', err);
+      console.error(' فشل في الإرسال', err);
     }
   });
 }

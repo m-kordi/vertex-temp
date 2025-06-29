@@ -1,14 +1,3 @@
-/* import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class CartsService {
-
-  constructor() { }
-}
- */
-// src/app/services/cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -87,21 +76,28 @@ decreaseQuantity(id: number) {
   }
 }
 
-getTotal(): number {
+/* getTotal(): number {
   return this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+} */
+getTotal(): number {
+  const total = this.items.reduce(
+    (sum, item) => sum + (item.price * item.quantity),
+    0
+  );
+  return Math.round(total * 100) / 100; // مشكلة الفواصل العشرية
 }
 
 
 checkoutCart() {
   const payload = {
-    id: 0, // أي رقم
-    userId: 123, // أي رقم ثابت كما طلبت
+    id: 0,
+    userId: 1,
     products: this.items.map(item => ({
       id: item.id,
       title: item.title,
       price: item.price,
-      description: 'No description',  // يمكنك تخصيصه
-      category: 'General',           // يمكنك تخصيصه
+      description: 'No description',  //غير موجود
+      category: 'General',           // غير موجود
       image: item.image
     }))
   };

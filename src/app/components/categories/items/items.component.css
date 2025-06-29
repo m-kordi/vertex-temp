@@ -136,9 +136,11 @@ section{
   cursor: pointer;
 
 }
+
 .add-to-cart i{
   color: var(--main-color);
 }
+
 .add-to-cart span{
   color: var(--main-color);
 }
@@ -250,7 +252,7 @@ section{
 .toast {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 40%;
   background: #4caf50;
   color: white;
   padding: 12px 24px;
