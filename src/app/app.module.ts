@@ -16,6 +16,7 @@ import { CartComponent } from './components/categories/cart/cart.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ItemDetailsComponent } from './components/categories/items/item-details/item-details.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
     ItemsComponent,
     PlaceholderComponent,
     CartComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,

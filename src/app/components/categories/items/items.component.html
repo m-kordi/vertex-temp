@@ -15,7 +15,7 @@
     </div>
     <div class="item-container">
       <div class="item-cards" *ngFor="let el of items">
-      <img loading="lazy" [src]="el.image" alt="img" />
+      <div routerLink="/itemdetails/{{el.id}}"><img loading="lazy" [src]="el.image" alt="img" /></div>
       <div class="item-intr">
         <p class="item-detail">{{ el.category }}</p>
         <p class="evalu">

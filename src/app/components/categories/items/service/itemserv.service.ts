@@ -10,4 +10,7 @@ export class ItemservService {
   getAllItems(){
     return this.http.get('https://fakestoreapi.com/products?limit=12')
   }
+  getItemByID(id:any){// تابعة لل itmedetails
+    return this.http.get('https://fakestoreapi.com/products/'+id)
+  }
 }
